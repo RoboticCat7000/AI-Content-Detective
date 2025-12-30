@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Detective</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI Content Detective</h1>
+
+        <div class="mode-tabs">
+            <button type="button" id="text" class="mode-btn active">Text Analysis</button>
+            <button type="button" id="image" class="mode-btn">Image Scan</button>
+            <button type="button" id="video" class="mode-btn">Video Check</button>
+        </div>
+
+        <form id="form">
+            <label for="input">Enter text to analyze:</label>
+            <textarea id="input" name="input" rows="6" ></textarea>
+            <button type="submit">Analyze Content</button>
+        </form>
+
+        <div id="results"></div>
+    </div>
+
+</body>
+</html>
