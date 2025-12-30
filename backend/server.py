@@ -67,3 +67,6 @@ def detect_text():
     v,c,r,rec = ai_text(text)
     output = make_response(v,c,r,rec)
     return jsonify({"message": f"{text} uploaded successfully", "output": output}), 200
+
+if __name__ == "__main__":
+    app.run()
