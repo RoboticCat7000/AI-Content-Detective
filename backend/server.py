@@ -9,9 +9,10 @@ app = Flask(__name__)
 CORS(app)
 
 def make_response(verdict, confidence_score, explanation, recommendation):
+    print(confidence_score)
     return {
         "verdict": verdict,
-        "confidence": f"{confidence_score}%",
+        "confidence": confidence_score,
         "mentor_response": explanation,
         "recommendation": recommendation
     }
@@ -30,7 +31,7 @@ def detect_image():
     
     if file:
         v,c,r,rec = ai_image(file)
-        output = make_response(v,c,r,rec)
+        output = make_response(v,c.astype(float),r,rec)
         return jsonify({"message": f"Image {file.filename} scanned successfully", "output": output}), 200
         
 

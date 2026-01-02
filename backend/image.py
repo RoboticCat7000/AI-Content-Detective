@@ -6,7 +6,7 @@ import tensorflow as tf
 import keras
 
 try:
-    detection_model = keras.models.load_model('ai_detector.h5')
+    detection_model = keras.models.load_model('./ai_detector.h5')
     print("Model loaded successfully!")
 except:
     print("ERROR: Could not find 'ai_detector.h5'. Did you run the training script?")

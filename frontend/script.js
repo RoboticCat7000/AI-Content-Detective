@@ -28,12 +28,18 @@ function displayResult(data) {
 
   results.style.borderLeft = `5px solid ${colorClass}`;
   results.style.display = "block";
-
+  console.log(data.output.confidence);
   results.innerHTML = `
-        <h2 style="color: ${colorClass}; margin-top: 0;">${data.output.verdict}</h2>
-        <p><strong>Percentage:</strong> ${data.output.confidence}</p>
+        <h2 style="color: ${colorClass}; margin-top: 0;">${
+    data.output.verdict
+  }</h2>
+        <p><strong>${
+          mode == "text" ? "Percentage" : "Percentage AI"
+        }:</strong> ${Math.round(Number(data.output.confidence))}%</p>
         <hr style="border: 0; border-top: 1px solid #ddd; margin: 15px 0;">
-        <p><strong>AI Content Detective:</strong> "${data.output.mentor_response}"</p>
+        <p><strong>AI Content Detective:</strong> "${
+          data.output.mentor_response
+        }"</p>
         <div style="background: #f8f9fa; padding: 10px; border-radius: 5px; margin-top: 10px;">
             <strong> Recommendation:</strong> ${data.output.recommendation}
         </div>
