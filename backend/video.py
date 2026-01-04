@@ -57,7 +57,7 @@ def analyze_video_frames(video_path, model):
     
     if total_frames_checked == 0:
         return "Error", 0.0
-
+    
     fake_ratio = fake_votes / total_frames_checked
     
     if fake_ratio > 0.4:

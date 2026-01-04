@@ -34,7 +34,7 @@ function displayResult(data) {
     data.output.verdict
   }</h2>
         <p><strong>${
-          mode == "text" ? "Percentage" : "Percentage AI"
+          mode == "image" ? "Percentage AI" : "Percentage"
         }:</strong> ${Math.round(Number(data.output.confidence))}%</p>
         <hr style="border: 0; border-top: 1px solid #ddd; margin: 15px 0;">
         <p><strong>AI Content Detective:</strong> "${
